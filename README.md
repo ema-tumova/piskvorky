@@ -1,2 +1,2 @@
 # piskvorky
-One dimensional tic-tac-toe
+One dimensional tic-tac-toe.
