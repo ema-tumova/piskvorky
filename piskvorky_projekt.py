@@ -1,5 +1,4 @@
 # PIŠKVORKY
-# Pokyny (PyLadies): https://naucse.python.cz/2018/pyladies-en-prague/beginners-en/tictactoe/
 
 from random import choice
 
@@ -93,28 +92,3 @@ def tictactoe():
             break
 
 tictactoe()
-
-# ŘEŠENÉ PROBLÉMY:
-
-# V tictactoe() se nepropojí "board" navzájem - vždy nanovo, čistá board.
-#   ŘEŠENÍ: Připomínat programu, ať aktualizuje board: board = player_move(board)
-# player_move(board) -> Vrací hodnotu 'None'.
-#   ŘEŠENÍ: Na konci první zavolané fce musím stanovit, čemu se rovná 'board' na jejím konci (nejen zavolat další fci), a dodat 'return board'.
-#   Zde např. : board = move(board, pc, position), return board
-
-# INSPIRACE (PyLadies):
-"""
-def piskvorky1d():
-    pole = '-' * 20                 # Příprava hry
-    while True:                     # Pořád dokola:
-        pole = tah_hrace(pole)      # 1. Zeptej se na tah
-        if vyhodnot(pole) != '-':   # 2. Zpracuj tah
-            break
-        print(pole)                 # 3. Vypiš stav hry
-
-                                    # A znova:
-        pole = tah_pocitace(pole)   # 1. Zeptej se na tah
-        if vyhodnot(pole) != '-':   # 2. Zpracuj tah
-            break
-        print(pole)                 # 3. Vypiš stav hry
-"""
